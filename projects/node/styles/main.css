@@ -1,0 +1,14 @@
+main{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    margin: 0  11rem;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    color: #555;
+}
+
+.content{
+    display: grid;
+    
+}

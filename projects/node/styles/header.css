@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+header{
+    background-color: #333;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 2.7rem;
+    justify-content: space-between;
+    align-content: center;
+    color: #e2dfdf;
+}
+img{
+    width: 6.25rem;
+}
+#container-2{
+    display: flex;
+    /* margin-left: 1.25rem;
+    margin-right: 1.25rem; */
+    align-content: center;
+    justify-content: space-evenly;
+}
+#container-2 > div{
+    margin-right: 1.25rem; 
+    text-align: center;
+    padding: .29rem;
+    font-size: .8rem;
+    
+}
+#container-1{
+    margin-left: 15px;
+}
+#container-3{
+    margin-right: 15px;
+}
