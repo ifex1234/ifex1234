@@ -27,25 +27,26 @@ let products = [
 
 let display_product = "";
 products.map((product) => {
+  let {product_name, product_image, product_desc, product_price, product_id} = product
   display_product += `
     <div class="my-items">
-    <div class="product-name">${product.product_name}</div>
+    <div class="product-name">${product_name}</div>
     <div class="product-image">
-      <img src=${product.product_image} alt="" />
+      <img src=${product_image} alt="" />
     </div>
-    <div class="product-desc">${product.product_desc}</div>
-    <div class="product-price">${product.product_price}</div>
+    <div class="product-desc">${product_desc}</div>
+    <div class="product-price">${product_price}</div>
     <div class="aside">
       <div class="para">Quantity: <span class="quantity">0</span></div>
     </div>
     <div>
-      <button class="increase js-btn">
+      <button class="increase" onclick="increase(${product_id})">
         <img src="images/add_FILL0_wght400_GRAD0_opsz48.png" alt="" />
       </button>
-      <button class="decrease js-btn">
+      <button class="decrease btn-decrease" onclick="decrease(${product_id})">
         <img src="images/delete_FILL0_wght400_GRAD0_opsz48.png" alt="" />
       </button>
-      <button class="add-to-cart js-cart-btn" data-product-id = ${product.product_id}>add to cart</button>
+      <button class="add-to-cart " onclick= "cart_btn(${product_id})" >add to cart</button>
     </div>
   </div>
   </div>
@@ -53,52 +54,31 @@ products.map((product) => {
 });
 
 document.querySelector(".container-js").innerHTML = display_product;
+const showQuantity = document.querySelector('quantity');
+let amount = 0;
+function increase(product_id){
+  console.log(product_id);
+  
+}
+function decrease(product_id){
+  console.log(product_id);
+  
+}
 
-// const btns = document.querySelectorAll('.js-btn');
-// const display = document.querySelector('.quantity');
-//  let value = 0;
-
-// btns.forEach((btn) =>{
-
-//     btn.addEventListener('click', ((e) =>{
-//         console.log('hello')
-
-//         let styles = e.currentTarget.classList;
-//         if(styles.contains('increase')){
-//             console.log(display)
-//             value ++;
-//             display.innerHTML=value;
-
-//         }
-//         else if(styles.contains('decrease')){
-//             console.log('hello2')
-//         }
-//         else {
-//             console.log('hello3')
-//         }
-//     }))
-// })
-
-const cart_btn = document.querySelectorAll(".js-cart-btn");
-cart_btn.forEach((button) => {
-  button.addEventListener("click", () => {
-    const my_product_id = button.dataset.productId;
-    let matching_items;
-
-    cart.forEach((items) => {
-      if (my_product_id === items.productId) {
-        matching_items = items;
-      }
+let cart_btn = (product_id)=>{
+  let select = product_id;
+  let search = cart.find((x)=> x.product_id === select.product_id);
+  if (search === undefined){
+    cart.push({
+      id: product_id,
+      item:1
     });
-    if (matching_items) {
-      matching_items.quantity += 1;
-    } else {
-      cart.push({
-        productId: products.product_id,
-        quantity: 1
-      });
-    }
-
-    console.log(cart);
-  });
-});
+  }
+  else{
+    search.item +=1;
+    
+  }
+  console.log(cart);
+  console.log(select);
+  console.log(search)
+}
