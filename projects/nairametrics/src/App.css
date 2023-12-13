@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #bec5ca,
+}
+.navLinks{
+  font-size:18px;
+  font-weight: 500;
+   display: inline-flex;
+   cursor: pointer;
+}
+.navLinks-small{
+  font-size:18px;
+  font-weight: 500;
+   display: flex;
+   cursor: pointer;
+   flex-direction: row;
+}
+
+.sideBarItems{
+  margin: 15px;
+  list-style: none;
+  display: flex;
+  align-content:flex-end;
+}
