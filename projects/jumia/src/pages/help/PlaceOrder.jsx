@@ -1,4 +1,4 @@
-import OrderHelp from '../helpPage/OrderHelp'
+import OrderHelp from '../helpPage/placeOrder'
 import PropTypes from 'prop-types'
 
 const PlaceOrder = props => {

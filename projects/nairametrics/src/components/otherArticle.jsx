@@ -6,9 +6,9 @@ export default function OtherArticle() {
   return (
     <>
       <Paper
-        sx={{
-          m: { md: "30px", xl: "10px", lg: "10px" },
-          maxWidth: { lg: "300px", md: "350px", xl: "300px" },
+        sx={{ 
+          m: { md: "20px", xl: "10px", lg: "15px" },
+          maxWidth: { lg: "250px", md: "250px", xl: "300px" },
           maxHeight: "570px",
           p: "20px",
         }}

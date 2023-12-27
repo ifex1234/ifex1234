@@ -7,8 +7,9 @@ import img4 from "../../assets/image/help/how-to-request-return-d.png";
 import img5 from "../../assets/image/help/how-to-track-order-d.png";
 import { Outlet, NavLink } from "react-router-dom";
 import { BsSearch, BsPerson } from "react-icons/bs";
-import { BiSolidPlaneAlt, BiWallet} from "react-icons/bi"
-import {FaTruck, FaUndo} from 'react-icons/fa'
+import { BiSolidPlaneAlt, BiWallet } from "react-icons/bi";
+import { FaTruck, FaUndo } from "react-icons/fa";
+import Footer from "../../components/footer";
 
 export const PayOrder = () => {
   return (
@@ -70,15 +71,18 @@ export const PayOrder = () => {
           </i>
         </div>
         <div className="help-main-content">
+
           <div className="main-content-1">
             <nav>
               <div className="link">
-                <span><BiWallet/></span>
                 <span>
-                <NavLink to="payments">Payments</NavLink>
-              </span>
+                  <BiWallet />
+                </span>
+                <span>
+                  <NavLink to="payments">Payments</NavLink>
+                </span>
               </div>
-              
+
               <span>
                 {<ArrowForwardIos sx={{ width: "12px", color: "orange" }} />}
               </span>
@@ -93,24 +97,28 @@ export const PayOrder = () => {
             </nav>
             <nav>
               <div className="link">
-                <span><FaTruck/></span>
-                 <span>
-                <NavLink to="delivery">Delivery</NavLink>
-              </span>
-                </div>
-             
+                <span>
+                  <FaTruck />
+                </span>
+                <span>
+                  <NavLink to="delivery">Delivery</NavLink>
+                </span>
+              </div>
+
               <span>
                 {<ArrowForwardIos sx={{ width: "12px", color: "orange" }} />}
               </span>
             </nav>
             <nav>
               <div className="link">
-                <span><FaUndo/></span>
                 <span>
-                <NavLink to="returns">Returns & Refunds</NavLink>
-              </span>
-                </div>
-              
+                  <FaUndo />
+                </span>
+                <span>
+                  <NavLink to="returns">Returns & Refunds</NavLink>
+                </span>
+              </div>
+
               <span>
                 {<ArrowForwardIos sx={{ width: "12px", color: "orange" }} />}
               </span>
@@ -154,12 +162,14 @@ export const PayOrder = () => {
             </nav>
             <nav>
               <div className="link">
-                <span>< BiSolidPlaneAlt/></span>
-              <span>
-                <NavLink to="jumiaGlobal">Jumia Global</NavLink>
-              </span>
+                <span>
+                  <BiSolidPlaneAlt />
+                </span>
+                <span>
+                  <NavLink to="jumiaGlobal">Jumia Global</NavLink>
+                </span>
               </div>
-              
+
               <span>
                 {<ArrowForwardIos sx={{ width: "12px", color: "orange" }} />}
               </span>
@@ -173,12 +183,39 @@ export const PayOrder = () => {
               </span>
             </nav>
           </div>
+
           <div className="main-content-2">
             <aside>
               <Outlet />
             </aside>
           </div>
         </div>
+       
+        <div className="main-content-3">
+           <div> <h5>Talk to an agent</h5></div>
+          <div className="main-content-3-content">
+           
+            <div>
+              <div>icon</div>
+              <div>
+                <span>Live Chat</span>
+                <span>
+                  We are available Monday to Sunday, between 8am and 8pm
+                </span>
+              </div>
+            </div>
+            <div>
+              <div>icon</div>
+              <div>
+                <span>Call</span>
+                <span>
+                  We are available Monday to Sunday, between 8am and 8pm
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Footer/>
       </div>
     </>
   );

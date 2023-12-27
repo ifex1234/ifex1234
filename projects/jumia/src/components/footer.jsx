@@ -10,13 +10,13 @@ const Footer = () => {
         <div className="footer-main">
           <div className="f-col">
             <div>
-              <h5>NEED HELP?</h5>
+              <h6>NEED HELP?</h6>
               <p>
                 <a href="">Chat with us</a> <br />
                 <a href="">Help Center</a> <br />
                 <a href="">Contact Us</a> <br />
               </p>
-              <h5>USEFUL LINKS</h5>
+              <h6>USEFUL LINKS</h6>
               <p>
                 <a href="">Service Center</a> <br />
                 <a href="">How to shop on Jumia?</a> <br />
@@ -31,7 +31,7 @@ const Footer = () => {
               </p>
             </div>
             <div>
-              <h5>ABOUT JUMIA</h5>
+              <h6>ABOUT JUMIA</h6>
               <p>
                 <a href="">About us</a> <br />
                 <a href="">Jumia careers</a> <br />
@@ -49,7 +49,7 @@ const Footer = () => {
               <br />
             </div>
             <div>
-              <h5>MAKE MONEY WITH JUMIA</h5>
+              <h6>MAKE MONEY WITH JUMIA</h6>
               <p>
                 <a href="">Sell on Jumia</a> <br />
                 <a href="">Vendor hub</a> <br />
@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
             <div className="d-flex flex-column">
               <div>
-                <h5>JUMIA INTERNATIONAL</h5>
+                <h6>JUMIA INTERNATIONAL</h6>
               </div>
               <div className="d-inline-flex flex-row">
                 <div>
@@ -85,21 +85,21 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="d-flex flex-row justify-content-between">
+          <div className="footer-div-1">
             <div className="my-3 ">
-              <h5>JOIN US ON</h5>
+              <h6>JOIN US ON</h6>
               <div className="my-3">
                 <Facebook sx={{ mr: "10px" }} />
                 <Twitter sx={{ mr: "10px" }} /> <YouTube sx={{ mr: "10px" }} />{" "}
                 <Instagram sx={{ mr: "10px" }} />
               </div>
-            </div>
+            </div> 
             <div className="my-3 ">
-              <h5>PAYMENT METHODS & DELIVERY PARTNERS</h5>
+              <h6>PAYMENT METHODS & DELIVERY PARTNERS</h6>
             </div>
-            <div></div>
+            <div style={{width:"35%"}}></div>
           </div>
-          <div className=" border-top pt-2 d-flex flex-row justify-content-center">
+          <div className=" footer-div-2">
             <div className="mx-4">PAY</div>
             <div>LOGISTICS</div>
           </div>

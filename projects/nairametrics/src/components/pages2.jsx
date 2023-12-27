@@ -1,4 +1,4 @@
-import { Card, Paper, Box, Typography, Stack, Button, Badge } from "@mui/material";
+import { Card, Paper, Box, Typography, Stack, Button, Badge, Pagination } from "@mui/material";
 import { Data } from "../assets/DATA/data/exclusive";
 import { AccessTime, Comment } from "@mui/icons-material";
 import { useState } from "react";
@@ -149,6 +149,16 @@ export default function Pages2({ Header, subHeader }) {
         <Badge>{Data.length}</Badge>
 
       </Stack>
+      <Pagination
+            color="standard"
+            shape="rounded"
+            defaultPage={1}
+            count={Math.ceil(Data.length / postPerPage)}
+            page={currentPage}
+            onChange={setCurrentPage}
+            size="large"
+          />
+
 
     </Paper>
   );

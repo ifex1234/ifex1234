@@ -1,7 +1,7 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  background-color: #bec5ca,
+  overflow-x: hidden;
 }
 .navLinks{
   font-size:18px;
@@ -22,4 +22,13 @@ body {
   list-style: none;
   display: flex;
   align-content:flex-end;
+}
+
+@media screen and (max-width:640){
+  body{
+    margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  }
+  
 }

@@ -8,7 +8,7 @@ const Paginate = ({ totalPost, postPerPage, setCurrentPage, currentPage }) => {
     pages.push(i);
   }
   return (
-    <div>
+    <div> 
       {pages.map((page, idx) => {
         return (
           <Button

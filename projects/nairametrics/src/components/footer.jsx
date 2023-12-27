@@ -16,7 +16,7 @@ export default function Footer() {
         pt="15px"
         display="flex"
         flexDirection='column'
-        mx='15px'
+        m='0px'
       >
         <Box
           display="flex"
@@ -62,7 +62,8 @@ export default function Footer() {
             <Box>
               <Typography gutterBottom="true" variant="body2">
                 {" "}
-                “80% of Nigerian startups are incorporated in the U.S.”- Consul
+                “80% of Nigerian startups are 
+                <br/>incorporated in the U.S.”- Consul
                 General
               </Typography>
               <Typography gutterBottom="true" variant="body2">
@@ -70,7 +71,8 @@ export default function Footer() {
                 Global debt rises to $307 trillion in Q3, 2023
               </Typography>
               <Typography gutterBottom="true" variant="body2">
-                Global dividend growth slows in Q3 amid oil and mining sector
+                Global dividend growth slows in Q3 amid
+                <br/> oil and mining sector
                 cuts -Report
               </Typography>
             </Box>

@@ -5,8 +5,8 @@ export const navLinks = [ 'Home','Business', 'Economy', 'Exclusive',
 ]
 
 export const Exclusive = ['Financial Analysis', 'Corporate Stories', 'Interviews', 'Investigations', 'Metrics'];
-export const Markets =['Currencies', 'Cryptos', 'Cpmmodities', 'Equities', 'Fixed Income', 'Market Views', 'Securities'];
-export const Industies = [
+export const Markets =['Currencies', 'Cryptos', 'Commodities', 'Equities', 'Fixed Income', 'Market Views', 'Securities'];
+export const Industries = [
     'Company News', 'Consumer Goods', 'Corporate deals', 'Corporate Updates', 'Corporate Press Releases', 
     'Energy', 'Entertainment', 'Financial Services', 'Hospitality & Travel', 'Manufacturing', 'Real Estate and Construction',
     'Tech News'

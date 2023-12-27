@@ -30,12 +30,17 @@ function Home() {
           width={{ xs: "97vw", m: "97%vw", md: "65vw", lg: "65vw", xl: "65vw" }}
           m="15px"
         >
+
           <Paper sx={{ width: "95%", my: "10px" }}>
             <Slider />
           </Paper>
+
+
           <Box sx={{ width: "98%", height: "auto", margin: "15px" }}>
             <BelowSlider />
           </Box>
+
+
           <Paper sx={{ width: "99%", m: "10px", pt: "20px" }}>
             <Box
               bgcolor="#abb8c3"
@@ -125,7 +130,7 @@ function Home() {
               </Typography>
             </Box>
 
-            <Box m="10px" height="660px" >
+            <Box m="10px" height="auto" >
               <Aside />
             </Box>
           </Box>

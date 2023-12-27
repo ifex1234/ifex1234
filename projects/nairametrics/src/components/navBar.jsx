@@ -1,6 +1,15 @@
-import img from '../assets/DATA/IMAGES/exclusive/card-payment-750x536.webp'
+import img from "../assets/DATA/IMAGES/exclusive/card-payment-750x536.webp";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
+import {
+  Exclusive,
+  Economy,
+  Financial_Literacy,
+  Industries,
+  Lifestyle,
+  Markets,
+  Opinions,
+} from "./constants";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -15,12 +24,10 @@ import Button from "@mui/material/Button";
 import SideBar from "./sideBar";
 import Cancel from "@mui/icons-material/Cancel";
 import { useState, useRef } from "react";
-import { Link as RouterLink } from "react-router-dom";
+import { NavLink, Link as RouterLink } from "react-router-dom";
 import Link from "@mui/material/Link";
-import InnerNavContents from "./innerNavContents";
 import "./style.css";
 
-// import LinearProgress from "@mui/material/LinearProgress";
 
 export default function NavBar() {
   let [displayComponent, setDisplayComponents] = useState("none");
@@ -105,7 +112,6 @@ export default function NavBar() {
         alignItems="center"
       >
         <Box ref={containerRef}>
-          
           <Button onClick={showSideBar}>
             <MenuIcon />
           </Button>
@@ -120,7 +126,7 @@ export default function NavBar() {
 
       <SideBar display={displayComponent} />
 
-      <NavigationBar />
+      <Navigator/>
 
       <Box
         position={{ xs: "absolute", sm: "absolute", md: "static" }}
@@ -134,40 +140,10 @@ export default function NavBar() {
           <Cancel sx={{ height: "100px" }} />
         </Button>
       </Box>
-
-
-
-      
     </>
   );
 }
 function NavigationBar() {
-  // const [progress, setProgress] = useState(0);
-
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setProgress((oldProgress) => {
-  //       if (oldProgress === 100) {
-  //         return 0;
-  //       }
-  //       const diff = Math.random() * 25;
-  //       return Math.min(oldProgress + diff, 99);
-  //     });
-  //   }, 50);
-
-  //   return () => {
-  //     clearInterval(timer);
-  //   };
-  // }, []);
-
-  // let [Contents, setShowContents] = useState("none");
-
-  // function showContents() {
-  //   setShowContents((Contents = "flex"));
-  // }
-
-
-  
   return (
     <>
       <Stack
@@ -181,7 +157,7 @@ function NavigationBar() {
         p={{ md: "10px 20px", lg: "10px 50px" }}
         overflow="hidden"
         position="sticky"
-        top='0px'
+        top="0px"
       >
         <Box display="inline-flex" flexDirection="row" gap="10px">
           <FacebookIcon />
@@ -339,13 +315,11 @@ function NavigationBar() {
                 underline="none"
               >
                 Lifestyle
-                
               </Link>
               <ExpandMore sx={{ color: "#777", width: "18px" }} />
               {/* <Box sx={{ width: "100px", display: "none" }}>
                 <LinearProgress variant="determinate" value={progress} />
               </Box> */}
-              
             </Stack>
 
             <Stack
@@ -387,33 +361,184 @@ function NavigationBar() {
                 <LinearProgress variant="determinate" value={progress} />
               </Box> */}
             </Stack>
-
-            <div className="navbar">
-              <a href="#home">Home</a>
-              <a href="#news">News</a>
-              <div className="dropdown">
-                <button className="dropbtn">
-                  Dropdown
-                  <i className="fa fa-caret-down"></i>
-                </button>
-                <div className="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-              </div>
-            </div>
           </Box>
         </Box>
 
         <Box sx={{ cursor: "pointer" }}>
           <SearchIcon sx={{ color: "#333" }} />
         </Box>
-        {/* 
-<InnerNavContents dis={Contents} /> */}
       </Stack>
     </>
   );
 }
 
+export const Navigator = () => {
 
+
+  return (
+     <div className="navbar">
+       <Box display="inline-flex" flexDirection="row" gap="10px" width='10vw'>
+          <FacebookIcon />
+          <YouTubeIcon />
+          <TwitterIcon />
+          <LinkedInIcon />
+        </Box>
+
+
+    <Box width='75vw'>
+      <div className="dropdown">
+        <button className="dropbtn">
+          <NavLink className="route " to="/ll">
+            <Typography variant="body1" fontWeight="bold" color="#444">
+              Home
+            </Typography>
+          </NavLink>
+        </button>
+      </div>
+
+      <div className="dropdown">
+        <button className="dropbtn">
+          <NavLink className="route " to="exclusive">
+            <Typography variant="body1" fontWeight="bold" color="#444">
+              Exclusive
+            </Typography>
+          </NavLink>
+          <ExpandMore sx={{ color: "#777", width: "18px" }} />
+        </button>
+        <div className="dropdown-content">
+          {Exclusive.map((content, index) => (
+            <NavLink key={index} to="#">
+              {content}
+            </NavLink>
+          ))}
+        </div>
+      </div>
+
+      <div className="dropdown">
+        <button className="dropbtn">
+          <NavLink className="route " to="market">
+            <Typography variant="body1" fontWeight="bold" color="#444">
+              Markets
+            </Typography>
+          </NavLink>
+          <ExpandMore sx={{ color: "#777", width: "18px" }} />
+        </button>
+        <div className="dropdown-content">
+          {Markets.map((content, index) => (
+            <NavLink key={index} to="#">
+              {content}
+            </NavLink>
+          ))}
+        </div>
+      </div>
+
+      <div className="dropdown">
+        <button className="dropbtn">
+          <NavLink className="route " to="industries">
+            <Typography variant="body1" fontWeight="bold" color="#444">
+              Sectors
+            </Typography>
+          </NavLink>
+          <ExpandMore sx={{ color: "#777", width: "18px" }} />
+        </button>
+        <div className="dropdown-content">
+          {Industries.map((content, index) => (
+            <NavLink key={index} to="#">
+              {content}
+            </NavLink>
+          ))}
+        </div>
+      </div>
+
+      <div className="dropdown">
+        <button className="dropbtn">
+          <NavLink className="route " to="economy">
+            <Typography variant="body1" fontWeight="bold" color="#444">
+              Economy
+            </Typography>
+          </NavLink>
+          <ExpandMore sx={{ color: "#777", width: "18px" }} />
+        </button>
+        <div className="dropdown-content">
+          {Economy.map((content, index) => (
+            <NavLink key={index} to="#">
+              {content}
+            </NavLink>
+          ))}
+        </div>
+      </div>
+
+      <div className="dropdown">
+        <button className="dropbtn">
+          <NavLink className="route " to="business">
+            <Typography variant="body2" fontWeight="bold" color="#444">
+              Business News
+            </Typography>
+          </NavLink>
+        </button>
+      </div>
+
+      <div className="dropdown">
+        <button className="dropbtn">
+          <NavLink className="route " to="financial">
+            <Typography variant="body2" fontWeight="bold" color="#444">
+              Financial Literacy
+            </Typography>
+          </NavLink>
+          <ExpandMore sx={{ color: "#777", width: "18px" }} />
+        </button>
+        <div className="dropdown-content">
+          {Financial_Literacy.map((content, index) => (
+            <NavLink key={index} to="#">
+              {content}
+            </NavLink>
+          ))}
+        </div>
+      </div>
+
+      <div className="dropdown">
+        <button className="dropbtn">
+          <NavLink className="route " to="lifestyle">
+            <Typography variant="body1" fontWeight="bold" color="#444">
+              Lifestyle
+            </Typography>
+          </NavLink>
+          <ExpandMore sx={{ color: "#777", width: "18px" }} />
+        </button>
+        <div className="dropdown-content">
+          {Lifestyle.map((content, index) => (
+            <NavLink key={index} to="#">
+              {content}
+            </NavLink>
+          ))}
+        </div>
+      </div>
+
+      <div className="dropdown">
+        <button className="dropbtn">
+          <NavLink className="route " to="opinions">
+            <Typography variant="body1" fontWeight="bold" color="#444">
+              Opinion
+            </Typography>
+          </NavLink>
+          <ExpandMore sx={{ color: "#777", width: "18px" }} />
+        </button>
+        <div className="dropdown-content">
+          {Opinions.map((content, index) => (
+            <NavLink key={index} to="#">
+              {content}
+            </NavLink>
+          ))}
+        </div>
+      </div>
+      </Box>
+
+      <Box sx={{ cursor: "pointer", width:"5vw" }}>
+          <SearchIcon sx={{ color: "#333" }} />
+        </Box>
+    </div>
+    
+    
+   
+  );
+};
