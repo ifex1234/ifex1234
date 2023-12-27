@@ -1,0 +1,24 @@
+@import 'variables';
+
+.storeContainer{
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    height: 410px;
+    background-color: #fff;  
+    flex-wrap: wrap;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.store{
+    width: 182px;
+    height: 90px;
+    margin: 5px;
+    background-color: $background2;
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+}

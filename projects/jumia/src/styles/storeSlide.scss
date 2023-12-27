@@ -1,0 +1,18 @@
+@import 'variables';
+
+.slideContainer2{
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    height: 320px;
+    gap: 10px;
+    margin-bottom: 80px;
+
+}
+
+.Carousel2{
+    height: inherit;
+    width: 100%;
+    margin-right: 10px;
+
+}

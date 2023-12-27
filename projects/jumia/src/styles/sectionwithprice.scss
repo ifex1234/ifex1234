@@ -1,0 +1,41 @@
+@import "variables";
+
+.p_container{
+   width: 98%;
+   height: 270px;
+   background-color: $background;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin-bottom: 10px;
+//    border-start-start-radius: ;
+   border-end-end-radius: 10px;
+}
+.p_main{
+    display: inline-flex;
+    flex-direction: row;
+    position: relative;
+
+}
+
+.p_content{
+   background-color: $background4;
+   width: 179px;
+   height: 250px;
+   margin: 5px 6.5px;
+
+   img{
+    width: 178px;
+    height: 250px;
+   }
+}
+.text{
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    padding: 5px;
+    color: $font1;
+    opacity: 0.5;
+    font-weight: 600;
+}

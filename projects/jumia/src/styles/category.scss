@@ -1,0 +1,76 @@
+@import "variables";
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    border-radius: 3px;
+    margin: 10px 0;
+}
+.card-items{
+    display: flex;
+    flex-direction: column;
+    width: 195px;
+    height: 400px;
+    margin: 5px;
+
+    img{
+        height: 200px;
+        width: 100%;
+    }
+    font-size: 12px;
+    button {
+    background-color: $myorange;
+    color: $font1;
+    width: 180px;
+    height: 40px;
+    margin: 5px;
+    border: none;
+    border-radius: .1875rem;
+    display: none;
+    font-weight: 600;
+    font-size: medium;
+}
+&:hover {
+    button{
+        display: block;
+    }
+}
+
+}
+.img{
+    width: 100%;
+    height:200px;
+}
+.line-price{
+    span{
+        text-decoration: line-through;
+    }
+}
+
+.CategoryHeader-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80px;
+   
+}
+.CategoryHeader-item1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 35px;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    margin: 5px;
+    padding: 5px;
+}
+.adContainer{
+    width: 100%;
+    margin: 10px 0;
+}
+.adContent{
+    width: 80%;
+    margin-left: 7vw;
+}

@@ -1,0 +1,50 @@
+@import 'variables';
+
+.nl-container{
+    width: 100vw;
+    background: #333;
+    height: 25vh;
+}
+.nl-main{
+    width: 86%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 6.5vw;
+    height: inherit;
+    padding: 15px 0;
+    color: $font1;
+    font-size: 1vw;
+
+    input{
+        height: 50px;
+        width: 250px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+        
+
+        &:focus{
+            border: none;
+            color: $myorange;
+            
+        }
+    }
+    button{
+        height: 50px;
+        width: 90px;
+        border-radius: 5px;
+        border: 1px solid white;
+        margin-right: 10px;
+        background-color: inherit;
+        color: $font1;
+        
+
+        &:hover{
+            border: 1px solid $myorange;
+            color: $myorange;
+        }
+    }
+   
+
+}

@@ -1,0 +1,99 @@
+@import "variables";
+.slideContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 0;
+    height: 400px;
+    gap: 10px;
+ 
+}
+.verticalNav{
+    width: 17%;
+    margin-top: 10px;
+    height: 97%;
+    background-color: $background;
+    border-radius: 2px;
+}
+@media screen and (max-width:900px) {
+    .verticalNav{
+        display: none;
+    }
+}
+@media screen and (max-width:1025px) {
+    .verticalNav{
+        width: 25%;
+    }
+}
+.nav-link{
+    text-decoration:dashed;
+
+    li{ 
+        margin: 10px;
+        font-size: .85rem;
+        color: $background3;
+        list-style: none;
+        &:hover{
+            color: $myorange;
+        }
+        a:hover{
+            color: $myorange;
+
+        }
+    }
+}
+.nav-list{
+    color: $font3;
+    text-decoration: none;
+}
+.Carousel{
+    height: inherit;
+    width: 61%;
+    margin-right: 10px;
+}
+// @media screen and (max-width:900px) {
+//     .Carousel{
+//         width: 65%;
+//     }
+    
+// }
+
+
+.other{
+    margin-top: 10px;
+    height: 96%;
+    width: 17%;
+    background-color: inherit;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+
+    .otherContent{
+        height: 48%;
+
+        background-color: $background3;
+
+        img{
+            width: 12.5rem;
+            height: 11.2rem;
+        }
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .other{
+        display: none;
+    }
+    
+}
+// @media screen and (max-width: 800px) {
+//     .other{
+//         width: 20%;
+
+//         img{
+//             width: 12.5rem;
+//             height: 11.2rem;
+//         }
+//     }
+    
+// }

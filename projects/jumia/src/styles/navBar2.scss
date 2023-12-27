@@ -1,0 +1,142 @@
+@import 'variables';
+
+@mixin navItems{
+    width: 80px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 10px;
+    color: #777;
+    cursor: pointer;
+}
+.bigg{
+    width: 100vw;
+    background-color: white;
+
+}
+
+.navBar2_navigator{
+    flex-direction: row;
+    width: 87%;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 6vw;
+}
+
+.navBar2_contents{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 81%;
+
+
+    span{
+        color: $myorange;
+    }
+
+    input {
+        width: 500px;
+        height: 30px;
+        border-radius: 3px;
+        border: 1px solid grey;
+        margin: 0 10px;
+        padding: 10px;
+        box-sizing: border-box;
+
+        &::placeholder{
+            padding: 15px;
+        }
+
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('../assets/image/search.png');
+  background-position: 10px 5px; 
+  background-repeat: no-repeat;
+  padding: 20px;
+    }
+
+    .search{
+
+        button{
+            @include navItems;
+        color: $font1;
+        border-radius: 3px;
+        border: none;
+        height: 35px;
+        background-color: $myorange;
+        &:hover{
+            background-color: $myorange_dark
+        }
+        }
+        
+        
+    }
+    span{
+        @include navItems;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100px;
+    }
+    
+}
+
+/** for mobile display*/
+.m_navBar2_container{
+    background-color: $background;
+    width: 90vw;
+    height: 90px;
+}
+.m_navBar2_navigator{ 
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 ;
+    margin-left: 10px;
+    height: 40px;
+    font-size: 20px;
+
+    span{
+        margin-left: 10px;
+    } 
+}
+.m_navBar2_input{
+    align-items: center;
+    width: 98vw;
+    height: 35px;
+
+    input{
+        width: 100%;
+        height: inherit;
+        border-radius: 20px;
+        border: 1px solid grey;
+        margin: auto;
+        margin-left: 1vw;
+    }
+
+}
+
+
+// @media screen and (max-width: 840px){
+//     .navBar2_container{
+//         display: none;
+//     }
+// }
+@media screen and (min-width: 920px){
+    .m_navBar2_container{
+        display: none;
+    }
+}
+@media screen and (max-width: 1030px){
+    .navBar2_contents{
+    
+        input {
+            width: 350px;
+      
+        }
+}
+}

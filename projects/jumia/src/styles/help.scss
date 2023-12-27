@@ -1,0 +1,115 @@
+@import 'variables';
+
+.help-container{
+    background-color: #f3ecec;
+}
+.help-main-content{
+    display: flex;
+    flex-direction: row;
+    width: 87%;
+    margin-left: 7vw;
+
+}
+.main-content-1{
+    width: 24%;
+    margin-right: 3%;
+    border: 0.4px solid rgb(218, 213, 213) ;
+    border-radius: 5px;
+    background-color: $background;
+    height: 450px;
+    
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.175rem;
+        height: 45px;
+        padding: .3525rem;
+        border-bottom: 1px solid rgb(218, 213, 213) ;
+        font-weight: 500;
+    }
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+
+}
+.link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .425rem;
+}
+.main-content-2{
+    width: 73%;
+    background-color: $background;
+    padding: .625rem;
+}
+.search-bar{
+    width: 28.5rem;
+    height: 2.525rem;
+    margin: 10px 0 15px 7vw;
+    position: relative;
+
+    input{
+        height: inherit;
+        width: inherit;
+        border-radius: .3125rem;
+        border: 0.5px solid #999;
+        padding: 3px;
+
+        &::placeholder{
+            margin: 5px;
+            padding-left: 30px;
+        }
+    }
+    i{
+        position: absolute;
+        top: 12px;
+        left: 5px;
+    }
+
+}
+.nav-items{
+    width: 87%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    margin-top: -50px;
+    justify-content: space-between;
+    margin-left: 7vw;
+
+    div{
+        width: 16.5vw;
+        height: inherit;
+        background-color: $background;
+        border-radius: 5px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        font-size: large;
+        font-weight: 600;
+
+        a{
+            color: $background3;
+            text-decoration: none;
+        }
+
+        img{
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+}
+.header{
+    background-color: #ffca9ffb;
+    height: 200px;
+    width: 100vw;
+    padding-top: 10px;
+
+    div{
+        font-size: 20px;
+        margin-left: 7vw;
+    }
+}
